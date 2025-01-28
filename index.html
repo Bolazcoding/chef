@@ -10,6 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <title>Chef Website | HomePage</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -17,7 +25,7 @@
     <header class="header">
       <div class="container container-nav">
         <div class="site-title">
-          <h1><a href="#">Chef</a></h1>
+          <h1><a href="./index.html">Chef</a></h1>
         </div>
         <nav>
           <ul>
@@ -34,7 +42,7 @@
         </nav>
       </div>
     </header>
-    <main role="main">
+    <main class="main">
       <div class="container container-nav">
         <article class="article-featured">
           <p class="article-title">More Then Faster</p>
@@ -93,7 +101,7 @@
         </div>
       </div>
     </section>
-    <aside id="chefs">
+    <aside class="aside" id="chefs">
       <div class="aside-body">
         <div class="aside-header">
           <p>OUR CHEFS</p>
@@ -118,31 +126,66 @@
           <p>WRITE YOUR QUESTIONS</p>
           <h3>Contact Us</h3>
         </div>
-        <form id="myform">
+        <form action="#" class="myform" netlify>
           <div class="input-box">
             <div class="input-details">
-              <input type="text" id="name" placeholder="*Name" required />
-            </div>
-            <div class="input-details">
-              <input type="email" id="email" placeholder="Email" required />
-            </div>
-            <div class="input-details">
+              <label class="label" for="name">Name</label>
               <input
-                class="input-message"
-                id="comment"
+                class="name"
                 type="text"
-                placeholder="Write Your Message.."
+                id="name"
+                placeholder="Full Name"
                 required
               />
+            </div>
+            <div class="input-details">
+              <label class="label" for="email">Email</label>
+              <input
+                class="email"
+                type="email"
+                id="email"
+                placeholder="email@gmail.com"
+                required
+              />
+            </div>
+            <div class="input-details">
+              <div class="comment-container">
+                <label class="label" for="text">Comment</label>
+                <input
+                  class="input-message"
+                  id="comment"
+                  type="text"
+                  placeholder="Write Your Message.."
+                  required
+                />
+              </div>
             </div>
           </div>
           <button type="submit" class="button-container">Send</button>
         </form>
       </div>
     </article>
-    <footer>
+
+    <div class="pop-up pop-up--notActive">
+      <div class="pop-up-message">
+        <div class="img">
+          <ion-icon
+            class="icon-mark"
+            name="checkmark-circle-outline"
+          ></ion-icon>
+        </div>
+        <h4 class="success">Success</h4>
+        <p class="success1">Thank you for your request</p>
+        <p class="success-confirm">
+          Shortly you will find a confirmation in your email
+        </p>
+
+        <button class="back-home">Continue</button>
+      </div>
+    </div>
+    <footer class="footer">
       <div class="footer-details">
-        <p>&copy; MOBOLAJI 2024 ALL RIGHT RESERVED</p>
+        <p>&copy; MOBOLAJI 2025 ALL RIGHT RESERVED</p>
       </div>
     </footer>
     <script src="./index.js"></script>

@@ -9,6 +9,7 @@ body {
   margin: 0;
   font-family: "Chivo", sans-serif;
   overflow-x: hidden;
+  position: relative;
 }
 h1 {
   font-size: 2rem;
@@ -150,6 +151,7 @@ main {
   background-color: #762323;
   color: white;
   padding: 0.7rem;
+  cursor: pointer;
 }
 .link-container:hover {
   background-color: #923232;
@@ -253,10 +255,20 @@ input {
   padding: 0.5rem;
   background-color: #ffd0d7;
   border: solid #ffd0d7;
+  margin-top: 5px;
 }
 .input-message {
   height: 100px;
   width: 350px;
+}
+
+.label {
+  color: #762323;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
 }
 .button-container {
   width: 100%;
@@ -266,6 +278,7 @@ input {
   font-size: 15px;
   color: #fefbfb;
   padding: 0.5rem;
+  cursor: pointer;
 }
 .button-container:hover {
   background-color: #923232;
@@ -292,22 +305,26 @@ footer {
     width: 300px;
   }
 }
+
 @media (max-width: 1200px) {
   .aside-image {
     width: 250px;
   }
 }
+
 @media (max-width: 1170px) {
   .aside-image {
     width: 230px;
     padding: 0.5rem;
   }
 }
+
 @media (max-width: 902px) {
   .aside-image {
     width: 210px;
   }
 }
+
 @media (max-width: 800px) {
   .aside-features {
     flex-direction: column;
@@ -337,17 +354,20 @@ footer {
     padding-top: 0.5rem;
   }
 }
+
 @media (max-width: 500px) {
   .aside-image {
     width: 230px;
     height: 200px;
   }
 }
+
 @media (max-width: 400px) {
   .aside-image {
     width: 170px;
   }
 }
+
 @media (max-width: 930px) {
   main {
     padding-top: 3rem;
@@ -368,6 +388,7 @@ footer {
         margin-bottom: 1.5rem;
     } */
 }
+
 @media (max-width: 682px) {
   main {
     flex-direction: column;
@@ -382,6 +403,7 @@ footer {
     padding-top: 2rem;
   }
 }
+
 @media (max-width: 400px) {
   .hamburger {
     margin: 0.5rem;
@@ -422,6 +444,7 @@ footer {
     font-size: 12px;
   }
 }
+
 @media (max-width: 500px) {
   .input-message {
     height: 50px;
@@ -434,6 +457,7 @@ footer {
     font-size: 12px;
   }
 }
+
 @media (max-width: 350px) {
   .input-message {
     height: 30px;
@@ -442,4 +466,57 @@ footer {
   input {
     padding: 0.22rem;
   }
+}
+
+.hidden {
+  display: none;
+}
+
+.pop-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 350px; */
+  background-color: #fefbfb;
+  height: 100vh;
+  /* position: absolute;
+  top: 50%; */
+}
+
+.pop-up--notActive {
+  display: none;
+}
+
+.pop-up-message {
+  text-align: center;
+  padding: 20px;
+}
+
+.icon-mark {
+  color: #762323;
+  width: 40px;
+  height: 40px;
+}
+
+.success {
+  color: #762323;
+  text-transform: uppercase;
+}
+
+.success-confirm {
+  opacity: 70%;
+}
+
+.back-home {
+  background-color: #762323;
+  border: none;
+  padding: 10px 35px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.back-home:hover {
+  background-color: #923232;
 }
